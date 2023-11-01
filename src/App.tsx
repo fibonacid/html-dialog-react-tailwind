@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Modal } from "./components/Step2";
+import { Modal } from "./components/Step3";
 
 function App() {
   const [open, setOpen] = useState(false);
