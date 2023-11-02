@@ -23,7 +23,19 @@ npx degit \
    ./Modal.tsx
 ```
 
-If you don't need the animation, you can copy the `step-2.tsx` file instead.
+If you don't need the animation stuff:
 
-If you don't need the TailwindCSS classes, you can copy the `step-1.tsx` file instead.
+```bash
+npx degit \
+   fibonacid/html-dialog-react-tailwind/src/Step2.tsx \
+   ./Modal.tsx
+```
+
+If you don't need the TailwindCSS classes:
+
+```bash
+npx degit \
+   fibonacid/html-dialog-react-tailwind/src/Step1.tsx \
+   ./Modal.tsx
+```
 
