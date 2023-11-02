@@ -1,27 +1,27 @@
-# React + TypeScript + Vite
+# html-dialog-react-tailwind
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Code repository for the article [Taming the HTML dialog with React and TailwindCSS](https://dev.to/fibonacid/taming-the-html-dialog-with-react-and-tailwindcss-5hec)
 
-Currently, two official plugins are available:
+## Install dependencies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The component uses `tailwind-merge` to merge the TailwindCSS classes with the ones passed as props.
 
-## Expanding the ESLint configuration
+```bash
+npm i tailwind-merge
+# yarn add tailwind-merge
+# pnpm add tailwind-merge
+```
+> If you don't need this feature, you can skip installing the dependency and remove `twMerge` from the `className` prop in the `Modal` component.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Copy the Modal component
 
-- Configure the top-level `parserOptions` property like this:
+Run the following command to copy the Modal component to your project:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+npx degit fibonacid/html-dialog-react-tailwind/src/components/step-3.tsx ./Modal.tsx
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+If you don't need the animation, you can copy the `step-2.tsx` file instead.
+
+If you don't need the TailwindCSS classes, you can copy the `step-1.tsx` file instead.
+
