@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <button
-        className="m-4 underline"
+        className="m-4 underline outline-none focus-visible:ring"
         onClick={() => setOpen(true)}
         aria-controls="modal"
         aria-labelledby="modal-title"
@@ -27,7 +27,7 @@ function App() {
         </p>
         <button
           autoFocus={true}
-          className="float-right underline"
+          className="float-right underline outline-none focus-visible:ring"
           onClick={() => setOpen(false)}
           aria-label="Close modal"
         >
