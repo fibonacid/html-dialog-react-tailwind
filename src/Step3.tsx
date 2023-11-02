@@ -5,7 +5,7 @@ export type ModalProps = ComponentPropsWithoutRef<"dialog"> & {
   onClose: () => void;
 };
 
-export function Modal(props: ModalProps) {
+export default function Modal(props: ModalProps) {
   const { children, open, onClose, className, ...rest } = props;
   const ref = useRef<HTMLDialogElement>(null);
 
@@ -13,8 +13,13 @@ export function Modal(props: ModalProps) {
     const dialog = ref.current!;
     if (open) {
       dialog.showModal();
+      dialog.dataset.open = "";
     } else {
-      dialog.close();
+      delete dialog.dataset.open;
+      const handler = () => dialog.close();
+      const inner = dialog.children[0] as HTMLElement;
+      inner.addEventListener("transitionend", handler);
+      return () => inner.removeEventListener("transitionend", handler);
     }
   }, [open]);
 
@@ -34,8 +39,10 @@ export function Modal(props: ModalProps) {
 
   return (
     <dialog ref={ref} className={twMerge("group", className)} {...rest}>
-      <div className="fixed inset-0 grid place-content-center bg-black/75">
-        <div className="w-full max-w-lg bg-white p-4 shadow-lg">{children}</div>
+      <div className="fixed inset-0 grid place-content-center bg-black/75 opacity-0 transition-all group-data-[open]:opacity-100">
+        <div className="w-full max-w-lg scale-75 bg-white p-4 opacity-0 shadow-lg transition-all group-data-[open]:scale-100 group-data-[open]:opacity-100">
+          {children}
+        </div>
       </div>
     </dialog>
   );
