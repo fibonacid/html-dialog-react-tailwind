@@ -26,6 +26,7 @@ function App() {
           dolor ducimus! Beatae.
         </p>
         <button
+          autoFocus={true}
           className="float-right underline"
           onClick={() => setOpen(false)}
           aria-label="Close modal"
