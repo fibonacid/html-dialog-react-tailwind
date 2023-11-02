@@ -35,7 +35,9 @@ export default function Modal(props: ModalProps) {
   return (
     <dialog ref={ref} className={twMerge("group", className)} {...rest}>
       <div className="fixed inset-0 grid place-content-center bg-black/75">
-        <div className="w-full max-w-lg bg-white p-4 shadow-lg">{children}</div>
+        <div className="m-2 w-full max-w-lg bg-white p-4 shadow-lg">
+          {children}
+        </div>
       </div>
     </dialog>
   );

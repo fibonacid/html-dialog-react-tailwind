@@ -40,7 +40,7 @@ export default function Modal(props: ModalProps) {
   return (
     <dialog ref={ref} className={twMerge("group", className)} {...rest}>
       <div className="fixed inset-0 grid place-content-center bg-black/75 opacity-0 transition-all group-data-[open]:opacity-100">
-        <div className="w-full max-w-lg scale-75 bg-white p-4 opacity-0 shadow-lg transition-all group-data-[open]:scale-100 group-data-[open]:opacity-100">
+        <div className="m-2 w-full max-w-lg scale-75 bg-white p-4 opacity-0 shadow-lg transition-all group-data-[open]:scale-100 group-data-[open]:opacity-100">
           {children}
         </div>
       </div>
