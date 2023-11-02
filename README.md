@@ -2,8 +2,6 @@
 
 Code repository for the article [Taming the HTML dialog with React and TailwindCSS](https://dev.to/fibonacid/taming-the-html-dialog-with-react-and-tailwindcss-5hec)
 
-<iframe src="https://html-dialog-react-tailwind-fibonacid.vercel.app" width="500" height="300" style="background: white"></iframe>
-
 ## Install dependencies
 
 The component uses `tailwind-merge` to merge the TailwindCSS classes with the ones passed as props.
