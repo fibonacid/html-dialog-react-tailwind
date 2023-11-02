@@ -6,9 +6,32 @@ function App() {
 
   return (
     <div>
-      <button onClick={() => setOpen(true)}>Open</button>
-      <Modal open={open} onClose={() => setOpen(false)}>
-        <button onClick={() => setOpen(false)}>Close</button>
+      <button
+        className="m-4 underline"
+        onClick={() => setOpen(true)}
+        aria-controls="modal"
+        aria-labelledby="modal-title"
+        aria-describedby="modal-desc"
+      >
+        Open modal
+      </button>
+      <Modal id="modal" open={open} onClose={() => setOpen(false)}>
+        <h2 id="modal-title" className="mb-1 text-lg font-bold">
+          Modal
+        </h2>
+        <p id="modal-desc">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab optio
+          totam nihil eos, dolor aut maiores, voluptatum reprehenderit sit
+          incidunt culpa? Voluptatum corrupti blanditiis nihil voluptatem atque,
+          dolor ducimus! Beatae.
+        </p>
+        <button
+          className="float-right underline"
+          onClick={() => setOpen(false)}
+          aria-label="Close modal"
+        >
+          Close
+        </button>
       </Modal>
     </div>
   );
