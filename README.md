@@ -18,24 +18,18 @@ npm i tailwind-merge
 Run the following command to copy the Modal component to your project:
 
 ```bash
-npx degit \
-   fibonacid/html-dialog-react-tailwind/src/Step3.tsx \
-   ./Modal.tsx
+npx degit fibonacid/html-dialog-react-tailwind/src/Step3.tsx ./Modal.tsx
 ```
 
 If you don't need the animation stuff:
 
 ```bash
-npx degit \
-   fibonacid/html-dialog-react-tailwind/src/Step2.tsx \
-   ./Modal.tsx
+npx degit fibonacid/html-dialog-react-tailwind/src/Step2.tsx ./Modal.tsx
 ```
 
 If you don't need the TailwindCSS classes:
 
 ```bash
-npx degit \
-   fibonacid/html-dialog-react-tailwind/src/Step1.tsx \
-   ./Modal.tsx
+npx degit fibonacid/html-dialog-react-tailwind/src/Step1.tsx ./Modal.tsx
 ```
 
